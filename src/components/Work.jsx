@@ -40,7 +40,7 @@ function Work() {
     },
   ];
   return (
-    <div className="w-full">
+    <div className="w-full mt-10">
       <div className="relative max-w-screen-xl bg-zinc-700 mx-auto mt-2 p-6">
         <h1 className="text-[23vw] leading-none tracking-tight font-semibold text-center select-none">
           WORK
