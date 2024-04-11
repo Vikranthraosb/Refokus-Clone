@@ -13,7 +13,11 @@ function Footer() {
           <div className="basis-1/3">
             <h1 className="mb-10 text-zinc-400 capitalize text-lg">Socials</h1>
             {["instagram", "twitter", "Linkdin"].map((item, index) => (
-              <a href="" className="block m-2 capitalize text-zinc-500">
+              <a
+                key={index}
+                href=""
+                className="block m-2 capitalize text-zinc-500"
+              >
                 {item}
               </a>
             ))}
@@ -21,7 +25,11 @@ function Footer() {
           <div className="basis-1/3">
             <h1 className="mb-10 text-zinc-400 capitalize text-lg">Socials</h1>
             {["instagram", "twitter", "Linkdin"].map((item, index) => (
-              <a href="" className="block m-2 capitalize text-zinc-500">
+              <a
+                key={index}
+                href=""
+                className="block m-2 capitalize text-zinc-500"
+              >
                 {item}
               </a>
             ))}

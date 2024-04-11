@@ -1,7 +1,10 @@
 import React from "react";
+import { useState } from "react";
+
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 function Work() {
-  var images = [
+  const [images, setimages] = useState([
     {
       url: "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/634ef09178195ce0073e38f3_Refokus%20Tools-1.png",
       top: "50%",
@@ -38,7 +41,15 @@ function Work() {
       left: "59%",
       isactive: false,
     },
-  ];
+  ]);
+  //framer motion start
+  const { scrollYProgress } = useScroll();
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    showandhideimages(Math.floor(latest * 100));
+  });
+  function showandhideimages(scrollval) {}
+
   return (
     <div className="w-full mt-10">
       <div className="relative max-w-screen-xl bg-zinc-700 mx-auto mt-2 p-6">
@@ -50,6 +61,7 @@ function Work() {
             (elem, index) =>
               elem.isactive && (
                 <img
+                  key={index}
                   className="absolute w-60 rounded-lg -translate-x-[50%] -translate-y-[50%]"
                   src={elem.url}
                   style={{ top: elem.top, left: elem.left }}

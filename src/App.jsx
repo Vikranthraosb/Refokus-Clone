@@ -9,10 +9,9 @@ import Footer from "./components/Footer";
 import LocomotiveScroll from "locomotive-scroll";
 
 function App() {
-  const locomotiveScroll = new LocomotiveScroll();
-
+  // const locomotiveScroll = new LocomotiveScroll();
   return (
-    <div className="w-full min-h-screen bg-zinc-900 text-white">
+    <div className="w-full h-full bg-zinc-900 text-white">
       <Navbar />
       <Work />
       <Stripes />
@@ -22,6 +21,10 @@ function App() {
       <Footer />
     </div>
   );
+  6;
 }
 
 export default App;
+
+// video left at 21 st min of part 2
+// while animating work component
