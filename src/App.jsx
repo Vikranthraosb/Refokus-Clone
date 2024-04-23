@@ -25,7 +25,3 @@ function App() {
 }
 
 export default App;
-
-// video left at 21 st min of part 2
-// while animating work component
-// add framer motion scroll
