@@ -1,11 +1,16 @@
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 function Card({ width, start, para, hover }) {
   //given default value
   return (
-    <div
-      className={`bg-zinc-800 p-5 rounded-xl ${width} min-h-[30rem] flex flex-col justify-between hover:${hover}`}
+    <motion.div
+      whileHover={{
+        backgroundColor: hover === "true" && "#7443ff",
+        padding: "25px",
+      }}
+      className={`bg-zinc-800 p-5 rounded-xl ${width} min-h-[30rem] flex flex-col justify-between`}
     >
       <div className="up w-full">
         <div className="w-full flex justify-between items-center">
@@ -32,7 +37,7 @@ function Card({ width, start, para, hover }) {
           </p>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
