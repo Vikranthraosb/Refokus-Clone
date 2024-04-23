@@ -45,11 +45,47 @@ function Work() {
   //framer motion start
   const { scrollYProgress } = useScroll();
 
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    showandhideimages(Math.floor(latest * 100));
-  });
-  function showandhideimages(scrollval) {}
+  scrollYProgress.on("change", (data) => {
+    function imageshow(arr) {
+      setimages((prev) =>
+        prev.map((item, index) =>
+          arr.indexOf(index) === -1
+            ? { ...item, isactive: false }
+            : { ...item, isactive: true }
+        )
+      );
+    }
 
+    switch (Math.floor(data * 100)) {
+      case 0:
+        imageshow([]);
+        break;
+      case 1:
+        imageshow([0]);
+
+        break;
+      case 3:
+        imageshow([0, 1]);
+
+        break;
+      case 4:
+        imageshow([0, 1, 2]);
+
+        break;
+      case 5:
+        imageshow([0, 1, 2, 3]);
+
+        break;
+      case 6:
+        imageshow([0, 1, 2, 3, 4]);
+
+        break;
+      case 7:
+        imageshow([0, 1, 2, 3, 4, 5]);
+
+        break;
+    }
+  });
   return (
     <div className="w-full mt-10">
       <div className="relative max-w-screen-xl bg-zinc-700 mx-auto mt-2 p-6">
