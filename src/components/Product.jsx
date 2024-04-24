@@ -3,7 +3,7 @@ import Buttons from "./Buttons";
 
 function Product({ val, mover, count }) {
   return (
-    <div className="w-full py-10 px-3 text-white bg-zinc-700 h-[17rem]">
+    <div className="w-full py-10 px-3 text-white bg-zinc-900 h-[17rem]">
       <div
         onMouseEnter={() => {
           mover(count);

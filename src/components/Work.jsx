@@ -88,7 +88,7 @@ function Work() {
   });
   return (
     <div className="w-full mt-20">
-      <div className="relative max-w-screen-xl bg-zinc-700 mx-auto mt-2 p-6">
+      <div className="relative max-w-screen-xl mx-auto mt-2 p-6">
         <h1 className="text-[25vw] leading-none tracking-tight font-semibold text-center select-none">
           WORK
         </h1>
